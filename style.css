@@ -25,7 +25,29 @@ header, form{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: xx-large;
 }
+
+#todo-input {
+    padding: 1rem;
+    width: 50vh;
+    border-radius: 1rem;
+    border: none;
+    font-size: large;
+}
+
+#todo-button {
+    margin-left: 1rem;
+    padding: 1rem;
+    border-radius: 5rem;
+    border: none;
+}
+
+#todo-button:hover {
+    background-image: linear-gradient(200deg, #4026e6, #f381da);
+    color: whitesmoke;
+}
+
 
 #todo-container {
     max-height: 52vh;
@@ -33,7 +55,6 @@ header, form{
 }
 
 #todo-list {
-    min-width: 30%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -42,13 +63,14 @@ header, form{
 }
 
 .box{
+    min-width: 60%;
     width: auto;
-    height: 2vh;
+    height: 6vh;
     margin: 0.5rem;
     padding: 0.5rem;
     text-align: center;
     color: whitesmoke;
-    background: var(--primary-color);
+    background-image: linear-gradient(200deg, #4026e6, #f381da);
     border-radius: 1rem;
     display: flex;
     justify-content: space-evenly;
