@@ -3,9 +3,6 @@ let todoBtn = document.querySelector("#todo-button");
 let todoDiv = document.querySelector(".box");
 let todoList = document.querySelector("#todo-list");
 
-// window.addEventListener("mousemove", e =>{
-
-// })
 
 todoBtn.addEventListener("click", e => {
     e.preventDefault();
@@ -32,5 +29,19 @@ todoBtn.addEventListener("click", e => {
         trashBtn.innerHTML = '<i class="fas fa-trash"></i>';
         trashBtn.classList.add("trash-btn");
         listItem.appendChild(trashBtn);
+    }
+})
+
+todoList.addEventListener("click", e => {
+    let item = e.target;
+    // delete todo box
+    if(item.classList[0] === "trash-btn"){
+        const todo = item.parentElement;
+        todo.remove();
+    }
+    // check mark
+    if(item.classList[0] === "complete-btn"){
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
     }
 })
