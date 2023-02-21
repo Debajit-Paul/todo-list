@@ -34,10 +34,14 @@ todoBtn.addEventListener("click", e => {
 
 todoList.addEventListener("click", e => {
     let item = e.target;
+    console.log(item.parentElement);
     // delete todo box
     if(item.classList[0] === "trash-btn"){
         const todo = item.parentElement;
-        todo.remove();
+        todo.classList.add("fall");
+        todo.addEventListener("transitionend", () =>{
+            todo.remove();
+        })
     }
     // check mark
     if(item.classList[0] === "complete-btn"){

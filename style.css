@@ -62,16 +62,17 @@ header, form{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+
 }
 
 .todo-item {
     display: flex;
     align-items: center;
     gap: 15px;
-    
+    transition: all 0.5s ease;
 }
 
-.box{
+.box {
     min-width: 30%;
     width: auto;
     height: auto;
@@ -84,7 +85,7 @@ header, form{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size:x-large;
+    font-size:x-large; 
 }
 
  .trash-btn, .complete-btn {
@@ -106,4 +107,9 @@ header, form{
  .completed {
     text-decoration: line-through;
     opacity: 0.5;
+ }
+
+ .fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
  }
